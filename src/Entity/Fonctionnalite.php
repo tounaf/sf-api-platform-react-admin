@@ -2,15 +2,15 @@
 
 namespace App\Entity;
 
-use App\Repository\EntiteRepository;
+use App\Repository\FonctionnaliteRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=EntiteRepository::class)
+ * @ORM\Entity(repositoryClass=FonctionnaliteRepository::class)
  */
-class Entite
+class Fonctionnalite
 {
     /**
      * @ORM\Id
@@ -30,13 +30,18 @@ class Entite
     private $code;
 
     /**
-     * @ORM\OneToMany(targetEntity=User::class, mappedBy="entite")
+     * @ORM\Column(type="boolean", length=255, nullable=true)
      */
-    private $users;
+    private $visible;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Droit::class, inversedBy="yes")
+     */
+    private $droits;
 
     public function __construct()
     {
-        $this->users = new ArrayCollection();
+        $this->droits = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -69,31 +74,41 @@ class Entite
     }
 
     /**
-     * @return Collection|User[]
+     * @return mixed
      */
-    public function getUsers(): Collection
+    public function getVisible()
     {
-        return $this->users;
+        return $this->visible;
     }
 
-    public function addUser(User $user): self
+    /**
+     * @param mixed $visible
+     */
+    public function setVisible($visible): void
     {
-        if (!$this->users->contains($user)) {
-            $this->users[] = $user;
-            $user->setEntite($this);
+        $this->visible = $visible;
+    }
+
+    /**
+     * @return Collection|Droit[]
+     */
+    public function getDroits(): Collection
+    {
+        return $this->droits;
+    }
+
+    public function addDroit(Droit $droit): self
+    {
+        if (!$this->droits->contains($droit)) {
+            $this->droits[] = $droit;
         }
 
         return $this;
     }
 
-    public function removeUser(User $user): self
+    public function removeDroit(Droit $droit): self
     {
-        if ($this->users->removeElement($user)) {
-            // set the owning side to null (unless already changed)
-            if ($user->getEntite() === $this) {
-                $user->setEntite(null);
-            }
-        }
+        $this->droits->removeElement($droit);
 
         return $this;
     }

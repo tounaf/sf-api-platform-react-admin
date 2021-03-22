@@ -2,15 +2,15 @@
 
 namespace App\Entity;
 
-use App\Repository\EntiteRepository;
+use App\Repository\SiteRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=EntiteRepository::class)
+ * @ORM\Entity(repositoryClass=SiteRepository::class)
  */
-class Entite
+class Site
 {
     /**
      * @ORM\Id
@@ -25,12 +25,7 @@ class Entite
     private $libelle;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $code;
-
-    /**
-     * @ORM\OneToMany(targetEntity=User::class, mappedBy="entite")
+     * @ORM\OneToMany(targetEntity=User::class, mappedBy="site")
      */
     private $users;
 
@@ -56,18 +51,6 @@ class Entite
         return $this;
     }
 
-    public function getCode(): ?string
-    {
-        return $this->code;
-    }
-
-    public function setCode(string $code): self
-    {
-        $this->code = $code;
-
-        return $this;
-    }
-
     /**
      * @return Collection|User[]
      */
@@ -80,7 +63,7 @@ class Entite
     {
         if (!$this->users->contains($user)) {
             $this->users[] = $user;
-            $user->setEntite($this);
+            $user->setSite($this);
         }
 
         return $this;
@@ -90,8 +73,8 @@ class Entite
     {
         if ($this->users->removeElement($user)) {
             // set the owning side to null (unless already changed)
-            if ($user->getEntite() === $this) {
-                $user->setEntite(null);
+            if ($user->getSite() === $this) {
+                $user->setSite(null);
             }
         }
 
