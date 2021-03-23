@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -94,6 +96,21 @@ class User implements UserInterface
      * @ORM\Column(type="boolean")
      */
     private $enable;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Entite::class, inversedBy="users")
+     */
+    private $entite;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Profile::class, inversedBy="users")
+     */
+    private $profiles;
+
+    public function __construct()
+    {
+        $this->profiles = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -316,6 +333,42 @@ class User implements UserInterface
     public function setEnable(bool $enable): self
     {
         $this->enable = $enable;
+
+        return $this;
+    }
+
+    public function getEntite(): ?Entite
+    {
+        return $this->entite;
+    }
+
+    public function setEntite(?Entite $entite): self
+    {
+        $this->entite = $entite;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Profile[]
+     */
+    public function getProfiles(): Collection
+    {
+        return $this->profiles;
+    }
+
+    public function addProfile(Profile $profile): self
+    {
+        if (!$this->profiles->contains($profile)) {
+            $this->profiles[] = $profile;
+        }
+
+        return $this;
+    }
+
+    public function removeProfile(Profile $profile): self
+    {
+        $this->profiles->removeElement($profile);
 
         return $this;
     }
