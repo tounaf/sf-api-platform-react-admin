@@ -95,16 +95,6 @@ class User implements UserInterface
      */
     private $enable;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Site::class, inversedBy="users")
-     */
-    private $site;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=Entite::class, inversedBy="users")
-     */
-    private $entite;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -326,30 +316,6 @@ class User implements UserInterface
     public function setEnable(bool $enable): self
     {
         $this->enable = $enable;
-
-        return $this;
-    }
-
-    public function getSite(): ?Site
-    {
-        return $this->site;
-    }
-
-    public function setSite(?Site $site): self
-    {
-        $this->site = $site;
-
-        return $this;
-    }
-
-    public function getEntite(): ?Entite
-    {
-        return $this->entite;
-    }
-
-    public function setEntite(?Entite $entite): self
-    {
-        $this->entite = $entite;
 
         return $this;
     }
