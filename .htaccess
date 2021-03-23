@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteCond %{REQUEST_URI} !^/suivi/ 
+RewriteRule ^(.*)$ /public/$1 [L]
+
+
+#AuthType Basic 
+#AuthName "Identification" 
+#AuthUserFile /opt/app/kpi-devi/.htpasswd 
+#require valid-user
