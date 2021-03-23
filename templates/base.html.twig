@@ -56,7 +56,7 @@
                     <img src="/dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">Dominique</a>
+                    {#<a href="#" class="d-block">Dominique</a>#}
                 </div>
             </div>
 
@@ -69,7 +69,7 @@
                         <a href="#" class="nav-link {% if app.request.get('_route') == 'home' or app.request.get('_route') == 'projet' or app.request.get('_route') == 'stat_int' %} active {% endif %}">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
-                                Suivi DEVI
+                                Parametrage
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -77,13 +77,13 @@
                             <li class="nav-item">
                                 <a href="{{ path('home') }}" class="nav-link {% if app.request.get('_route') == 'home'  %} active {% endif %}">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Repporting</p>
+                                    <p>Utilisateurs</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ path('home') }}" class="nav-link {% if app.request.get('_route') == 'stat_int' %} active {% endif %}">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Non Production</p>
+                                    <p>SITE</p>
                                 </a>
                             </li>
                             <!--li class="nav-item">

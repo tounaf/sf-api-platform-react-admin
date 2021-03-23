@@ -6,7 +6,7 @@ use App\Repository\EntiteRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-//p47iSs3rie
+
 /**
  * @ORM\Entity(repositoryClass=EntiteRepository::class)
  */
