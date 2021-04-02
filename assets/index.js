@@ -8,7 +8,7 @@ import BaseLayout from "./layout/BaseLayout"
 // domain translations
 // require('./i18n/fr');
 
-const dataProvider = 'http://localhost:8001/api';
+const dataProvider = process.env.ENTRY_POINT_API;
 const i8nProvider = polyglotI18nProvider(() => frenchMessages, 'fr');
 
 // const i8nProvider = polyglotI18nProvider(locale => messages);

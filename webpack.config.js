@@ -81,6 +81,9 @@ Encore
         }
 
         options['process.env'].BEST_API_KEY = JSON.stringify(env.parsed.DATABASE_URL);
+        if (Encore.isProduction()) {
+            options['process.env'].ENTRY_POINT_API = JSON.stringify(env.parsed.ENTRY_POINT_API);
+        }
     })
 ;
 
