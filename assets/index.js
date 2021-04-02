@@ -15,7 +15,11 @@ const i8nProvider = polyglotI18nProvider(() => frenchMessages, 'fr');
 console.log(process.env.ENTRY_POINT_API)
 const App = () => (
     <HydraAdmin entrypoint={dataProvider} layout={BaseLayout} i18nProvider={i8nProvider} locale="fr">
+        <ResourceGuesser name="users" options={{label: "Liste utilisateurs"}}/>
+        <ResourceGuesser name="profiles" options={{label: "Liste profiles"}}/>
         <ResourceGuesser name="sites" options={{label: "Liste site"}}/>
+        <ResourceGuesser name="entites" options={{label: "Liste entités"}}/>
+        <ResourceGuesser name="entite_types" options={{label: "Liste type d'entités"}}/>
     </HydraAdmin>
 );
 ReactDOM.render(
