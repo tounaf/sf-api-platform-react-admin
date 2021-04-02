@@ -12,7 +12,7 @@ const dataProvider = process.env.ENTRY_POINT_API;
 const i8nProvider = polyglotI18nProvider(() => frenchMessages, 'fr');
 
 // const i8nProvider = polyglotI18nProvider(locale => messages);
-console.log(process.env.BEST_API_KEY)
+console.log(process.env.ENTRY_POINT_API)
 const App = () => (
     <HydraAdmin entrypoint={dataProvider} layout={BaseLayout} i18nProvider={i8nProvider} locale="fr">
         <ResourceGuesser name="sites" options={{label: "Liste site"}}/>
