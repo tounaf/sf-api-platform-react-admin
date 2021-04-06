@@ -8,11 +8,15 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     denormalizationContext={"groups"={"user:write"}},
+ * )
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @ORM\Table(name="`user`")
+ *
  */
 class User implements UserInterface
 {
@@ -25,11 +29,13 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Groups("user:write")
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("user:write")
      */
     private $login;
 
@@ -46,61 +52,73 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("user:write")
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("user:write")
      */
     private $prenom;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups("user:write")
      */
     private $situationMatrimoniale;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("user:write")
      */
     private $civilite;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
+     * @Groups("user:write")
      */
     private $dateDeNaissance;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups("user:write")
      */
     private $photoProfile;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Groups("user:write")
      */
     private $competence;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
+     * @Groups("user:write")
      */
     private $dateEntree;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
+     * @Groups("user:write")
      */
     private $dateSortie;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Groups("user:write")
      */
     private $remarque;
 
     /**
      * @ORM\Column(type="boolean")
+     * @Groups("user:write")
      */
     private $enable;
 
     /**
      * @ORM\ManyToOne(targetEntity=Entite::class, inversedBy="users")
+     * @Groups("user:write")
      */
     private $entite;
 
