@@ -2,6 +2,9 @@ security:
     encoders:
         App\Entity\User:
             algorithm: auto
+    role_hierarchy:
+        ROLE_ADMIN: [ROLE_USER, ROLE_CAISSE, ROLE_RESPONSABLE_STOCK, ROLE_PRODUCTION, ROLE_CUISINIER, ROLE_SERVEUR]
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
@@ -50,4 +53,9 @@ security:
         - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
         - { path: ^/api/login_check, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api/users, roles: ROLE_ADMIN }
+        - { path: ^/api/profiles, roles: ROLE_ADMIN }
+        - { path: ^/api/entite_types, roles: ROLE_ADMIN }
+        - { path: ^/api/entites, roles: ROLE_ADMIN }
+        - { path: ^/api/sites, roles: ROLE_ADMIN }
 #        - { path: ^/api,       roles: IS_AUTHENTICATED_FULLY }
