@@ -9,10 +9,12 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Serializer\Annotation\SerializedName;
 
 /**
  * @ApiResource(
  *     denormalizationContext={"groups"={"user:write"}},
+ *     normalizationContext={"groups"={"user:read"}}
  * )
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @ORM\Table(name="`user`")
@@ -29,101 +31,112 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
-     * @Groups("user:write")
+     * @Groups({"user:write", "user:read"})
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("user:write")
+     * @Groups({"user:write", "user:read"})
      */
     private $login;
 
     /**
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"user:write", "user:read"})
+     */
+    private $username;
+
+
+    /**
+     * @ORM\Column(type="array", nullable=true)
+     * @Groups({"user:read"})
      */
     private $roles = [];
 
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
+     * @Groups("user:write")
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("user:write")
+     * @Groups({"user:write", "user:read"})
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("user:write")
+     * @Groups({"user:write", "user:read"})
      */
     private $prenom;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Groups("user:write")
+     * @Groups({"user:write", "user:read"})
      */
     private $situationMatrimoniale;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("user:write")
+     * @Groups({"user:write", "user:read"})
      */
     private $civilite;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
-     * @Groups("user:write")
+     * @Groups({"user:write", "user:read"})
      */
     private $dateDeNaissance;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Groups("user:write")
+     * @Groups({"user:write", "user:read"})
      */
     private $photoProfile;
 
     /**
      * @ORM\Column(type="text", nullable=true)
-     * @Groups("user:write")
+     * @Groups({"user:write", "user:read"})
      */
     private $competence;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
-     * @Groups("user:write")
+     * @Groups({"user:write", "user:read"})
      */
     private $dateEntree;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
-     * @Groups("user:write")
+     * @Groups({"user:write", "user:read"})
+     * @SerializedName("date_sortie")
      */
     private $dateSortie;
 
     /**
      * @ORM\Column(type="text", nullable=true)
-     * @Groups("user:write")
+     * @Groups({"user:write", "user:read"})
      */
     private $remarque;
 
     /**
      * @ORM\Column(type="boolean")
-     * @Groups("user:write")
+     * @Groups({"user:write", "user:read"})
      */
     private $enable;
 
     /**
      * @ORM\ManyToOne(targetEntity=Entite::class, inversedBy="users")
-     * @Groups("user:write")
+     * @Groups({"user:write", "user:read"})
      */
     private $entite;
 
     /**
      * @ORM\ManyToMany(targetEntity=Profile::class, inversedBy="users")
+     * @Groups({"user:write", "user:read"})
      */
     private $profiles;
 
@@ -137,6 +150,15 @@ class User implements UserInterface
         return $this->id;
     }
 
+    /**
+     * @param $username
+     * @return $this
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+        return $this;
+    }
     public function getEmail(): ?string
     {
         return $this->email;
@@ -171,7 +193,11 @@ class User implements UserInterface
         return array_unique($roles);
     }
 
-    public function setRoles(array $roles): self
+    /**
+     * @param null|array $roles
+     * @return User
+     */
+    public function setRoles($roles): self
     {
         $this->roles = $roles;
 

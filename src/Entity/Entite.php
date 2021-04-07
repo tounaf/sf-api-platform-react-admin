@@ -7,10 +7,16 @@ use App\Repository\EntiteRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Serializer\Annotation\SerializedName;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     denormalizationContext={"groups"={"entite:write"}},
+ *     normalizationContext={"groups"={"entite:read"}}
+ * )
  * @ORM\Entity(repositoryClass=EntiteRepository::class)
+ * @ORM\HasLifecycleCallbacks()
  */
 class Entite
 {
@@ -18,16 +24,19 @@ class Entite
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     *
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"entite:read", "entite:write"})
      */
     private $libelle;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"entite:read", "entite:write"})
      */
     private $code;
 
@@ -48,17 +57,22 @@ class Entite
 
     /**
      * @ORM\ManyToOne(targetEntity=EntiteType::class, inversedBy="entites")
+     * @Groups({"entite:read", "entite:write"})
+     * @SerializedName("type")
      */
     private $entiteType;
 
     /**
      * @ORM\ManyToOne(targetEntity=Site::class, inversedBy="entites")
+     * @Groups({"entite:read", "entite:write"})
      */
     private $site;
 
     public function __construct()
     {
         $this->users = new ArrayCollection();
+        $this->createAt = new \DateTime();
+        $this->updatedAt = new \DateTime();
     }
 
     public function getId(): ?int
@@ -166,5 +180,13 @@ class Entite
         $this->site = $site;
 
         return $this;
+    }
+
+    /**
+     * @ORM\PreUpdate()
+     */
+    public function preUpdate()
+    {
+        $this->updatedAt = new \DateTime();
     }
 }

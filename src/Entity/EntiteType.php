@@ -7,9 +7,12 @@ use App\Repository\EntiteTypeRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ApiResource(
+ *     denormalizationContext={"groups"={"type:write"}},
+ *     normalizationContext={"groups"={"type:read"}},
  *     itemOperations={"get"},
  *     collectionOperations={"get"},
  * )
@@ -26,11 +29,13 @@ class EntiteType
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"type:read","entite:read"})
      */
     private $libelle;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"type:read"})
      */
     private $code;
 

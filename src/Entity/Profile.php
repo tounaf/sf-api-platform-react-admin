@@ -7,9 +7,14 @@ use App\Repository\ProfileRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     normalizationContext={"groups"={"profile:read"}},
+ *     itemOperations={"get"},
+ *     collectionOperations={"get"}
+ * )
  * @ORM\Entity(repositoryClass=ProfileRepository::class)
  */
 class Profile
@@ -23,11 +28,13 @@ class Profile
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"profile:read"})
      */
     private $libelle;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"profile:read"})
      */
     private $code;
 

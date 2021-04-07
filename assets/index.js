@@ -5,6 +5,11 @@ import { HydraAdmin, ResourceGuesser  } from "@api-platform/admin";
 import polyglotI18nProvider from 'ra-i18n-polyglot';
 import frenchMessages from 'ra-language-french';
 import BaseLayout from "./layout/BaseLayout"
+import UserCreate from "./components/User/UserCreate";
+import EntiteCreate from "./components/Entite/EntiteCreate";
+import EntiteEdit from "./components/Entite/EntiteEdit";
+import EntiteShow from "./components/Entite/EntiteShow";
+import EntiteList from "./components/Entite/EntiteList";
 // domain translations
 // require('./i18n/fr');
 
@@ -15,11 +20,11 @@ const i8nProvider = polyglotI18nProvider(() => frenchMessages, 'fr');
 console.log(process.env.ENTRY_POINT_API)
 const App = () => (
     <HydraAdmin entrypoint={dataProvider} layout={BaseLayout} i18nProvider={i8nProvider} locale="fr">
-        <ResourceGuesser name="users" options={{label: "Liste utilisateurs"}}/>
-        <ResourceGuesser name="profiles" options={{label: "Liste profiles"}}/>
-        <ResourceGuesser name="sites" options={{label: "Liste site"}}/>
-        <ResourceGuesser name="entites" options={{label: "Liste entités"}}/>
-        <ResourceGuesser name="entite_types" options={{label: "Liste type d'entités"}}/>
+        <ResourceGuesser name="users" create={UserCreate} options={{label: "Utilisateurs"}}/>
+        <ResourceGuesser name="profiles" options={{label: "Profiles"}}/>
+        <ResourceGuesser name="sites" options={{label: "Sites"}}/>
+        <ResourceGuesser name="entites" list={EntiteList} show={EntiteShow} edit={EntiteEdit} create={EntiteCreate} options={{label: "Entités"}}/>
+        <ResourceGuesser name="entite_types" options={{label: "Type d'entités"}}/>
     </HydraAdmin>
 );
 ReactDOM.render(
