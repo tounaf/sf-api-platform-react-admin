@@ -16,12 +16,12 @@ class ProfileGenerateCommand extends Command
     protected static $defaultName = 'app:profile:generate';
     protected static $defaultDescription = 'Add a short description for your command';
     private $profiles = [
-      'libelle' => 'Admin', 'code' => 'ROLE_ADMIN',
-      'libelle' => 'Caisse', 'code' => 'ROLE_CAISSE',
-      'libelle' => 'Responsable Stock', 'code' => 'ROLE_RESPONSABLE_STOCK',
-      'libelle' => 'Responsable Production', 'code' => 'ROLE_PRODUCTION',
-      'libelle' => 'Cuisinier(re)', 'code' => 'ROLE_CUISINIER',
-      'libelle' => 'Serveuse(se)', 'code' => 'ROLE_SERVEUR',
+      ['libelle' => 'Admin', 'code' => 'ROLE_ADMIN'],
+      ['libelle' => 'Caisse', 'code' => 'ROLE_CAISSE'],
+      ['libelle' => 'Responsable Stock', 'code' => 'ROLE_RESPONSABLE_STOCK'],
+      ['libelle' => 'Responsable Production', 'code' => 'ROLE_PRODUCTION'],
+      ['libelle' => 'Cuisinier(re)', 'code' => 'ROLE_CUISINIER'],
+      ['libelle' => 'Serveuse(se)', 'code' => 'ROLE_SERVEUR'],
     ];
     /**
      * @var EntityManagerInterface

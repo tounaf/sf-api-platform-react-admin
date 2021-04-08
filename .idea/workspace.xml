@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bcc3903-7e1b-41c1-9dff-613ac68f41f8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Command/EntiteTypeGenerateCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/EntiteTypeGenerateCommand.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Command/ProfileGenerateCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/ProfileGenerateCommand.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,7 +61,7 @@
             <entry file="file://$PROJECT_DIR$/src/Command/EntiteTypeGenerateCommand.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="489">
-                  <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+                  <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
                   <folding>
                     <element signature="e#31#57#0#PHP" expanded="true" />
                   </folding>
@@ -82,8 +81,8 @@
           <file leaf-file-name="ProfileGenerateCommand.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Command/ProfileGenerateCommand.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="213">
-                  <caret line="39" column="55" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
+                <state relative-caret-position="210">
+                  <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
                   <folding>
                     <element signature="e#31#54#0#PHP" expanded="true" />
                   </folding>
@@ -525,12 +524,12 @@
       <workItem from="1617093264161" duration="13325000" />
       <workItem from="1617181350172" duration="6860000" />
       <workItem from="1617195354643" duration="16696000" />
-      <workItem from="1617685166455" duration="21107000" />
+      <workItem from="1617685166455" duration="21519000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85174000" />
+    <option name="totallyTimeSpent" value="85586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="837" y="103" width="1561" height="938" extended-state="0" />
@@ -541,9 +540,9 @@
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.32882273" />
-      <window_info anchor="bottom" id="Terminal" order="4" visible="true" weight="0.47875" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.51875" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.11992005" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.11992005" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
@@ -923,7 +922,7 @@
     <entry file="file://$PROJECT_DIR$/src/Command/EntiteTypeGenerateCommand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
-          <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
           <folding>
             <element signature="e#31#57#0#PHP" expanded="true" />
           </folding>
@@ -932,8 +931,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Command/ProfileGenerateCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="39" column="55" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
+        <state relative-caret-position="210">
+          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
           <folding>
             <element signature="e#31#54#0#PHP" expanded="true" />
           </folding>
