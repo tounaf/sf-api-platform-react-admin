@@ -1,17 +1,13 @@
-import { AUTH_LOGIN } from 'react-admin';
-import { Accordion } from '@material-ui/core';
+// in src/authProvider.js
+import decodeJwt from 'jwt-decode';
 
-export default (type, params) => {
-
-    console.log(type, params);
-    if (type === AUTH_LOGIN) {
-        alert('kama')
-        const { username, password } = params;
-        const request = new Request('https://localhost:8001/authenticate_token', {
+export default {
+    login: ({username, password}) => {
+        const request = new Request('http://localhost:8001/authentication_token', {
             method: 'POST',
-            body: JSON.stringify({ username, password }),
-            headers: new Headers({ 'Content-Type': 'application/json' }),
-        })
+            body: JSON.stringify({username, password}),
+            headers: new Headers({'Content-Type': 'application/json'}),
+        });
         return fetch(request)
             .then(response => {
                 if (response.status < 200 || response.status >= 300) {
@@ -19,9 +15,25 @@ export default (type, params) => {
                 }
                 return response.json();
             })
-            .then(({ token }) => {
+            .then(({token}) => {
+                const decodedToken = decodeJwt(token);
                 localStorage.setItem('token', token);
+                localStorage.setItem('permissions', decodedToken.permissions);
             });
-    }
-    return Promise.resolve();
-}
+    },
+    logout: () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('permissions');
+        return Promise.resolve();
+    },
+    checkError: error => {
+        // ...
+    },
+    checkAuth: () => {
+        return localStorage.getItem('token') ? Promise.resolve() : Promise.reject();
+    },
+    getPermissions: () => {
+        const role = localStorage.getItem('permissions');
+        return role ? Promise.resolve(role) : Promise.reject();
+    },
+};

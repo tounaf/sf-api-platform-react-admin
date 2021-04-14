@@ -53,9 +53,9 @@ security:
         - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
         - { path: ^/api/login_check, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-#        - { path: ^/api/users, roles: ROLE_ADMIN }
-#        - { path: ^/api/profiles, roles: ROLE_ADMIN }
-#        - { path: ^/api/entite_types, roles: ROLE_ADMIN }
-#        - { path: ^/api/entites, roles: ROLE_ADMIN }
-#        - { path: ^/api/sites, roles: ROLE_ADMIN }
+        - { path: ^/api/users, roles: ROLE_USER }
+        - { path: ^/api/profiles, roles: ROLE_USER }
+        - { path: ^/api/entite_types, roles: ROLE_USER }
+        - { path: ^/api/entites, roles: ROLE_USER }
+        - { path: ^/api/sites, roles: ROLE_USER }
 #        - { path: ^/api,       roles: IS_AUTHENTICATED_FULLY }

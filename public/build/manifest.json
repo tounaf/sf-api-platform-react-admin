@@ -5,7 +5,12 @@
   "build/home.js": "/build/home.js",
   "build/runtime.js": "/build/runtime.js",
   "build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc.js": "/build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc.js",
+  "build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_expo-1b1321.js": "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_expo-1b1321.js",
+  "build/vendors-node_modules_api-platform_admin_lib_index_js-node_modules_material-ui_icons_Label_js--175f9f.js": "/build/vendors-node_modules_api-platform_admin_lib_index_js-node_modules_material-ui_icons_Label_js--175f9f.js",
+  "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-09d390.js": "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-09d390.js",
   "build/vendors-node_modules_core-js_modules_es_object_create_js-node_modules_core-js_modules_es_obje-e078df.js": "/build/vendors-node_modules_core-js_modules_es_object_create_js-node_modules_core-js_modules_es_obje-e078df.js",
   "build/vendors-node_modules_api-platform_admin_lib_index_js-node_modules_material-ui_icons_Label_js--451826.js": "/build/vendors-node_modules_api-platform_admin_lib_index_js-node_modules_material-ui_icons_Label_js--451826.js",
-  "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js.js": "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js.js"
+  "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js.js": "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js.js",
+  "build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-data-json-server_esm_index_-8482d4.js": "/build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-data-json-server_esm_index_-8482d4.js",
+  "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-7db861.js": "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-7db861.js"
 }
