@@ -1,11 +1,11 @@
 {
-  "build/app.css": "/build/app.css",
-  "build/app.js": "/build/app.js",
-  "build/index.js": "/build/index.js",
-  "build/home.js": "/build/home.js",
-  "build/runtime.js": "/build/runtime.js",
-  "build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc.js": "/build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc.js",
-  "build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_expo-1b1321.js": "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_expo-1b1321.js",
-  "build/vendors-node_modules_api-platform_admin_lib_index_js-node_modules_material-ui_icons_Label_js--175f9f.js": "/build/vendors-node_modules_api-platform_admin_lib_index_js-node_modules_material-ui_icons_Label_js--175f9f.js",
-  "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-09d390.js": "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-09d390.js"
+  "build/app.css": "/build/app.b75294ae.css",
+  "build/app.js": "/build/app.825d16f2.js",
+  "build/index.js": "/build/index.835de642.js",
+  "build/home.js": "/build/home.69cee111.js",
+  "build/runtime.js": "/build/runtime.c2b5f79a.js",
+  "build/660.e516ad98.js": "/build/660.e516ad98.js",
+  "build/23.ffdaa620.js": "/build/23.ffdaa620.js",
+  "build/425.4a291569.js": "/build/425.4a291569.js",
+  "build/363.5ca46b49.js": "/build/363.5ca46b49.js"
 }
