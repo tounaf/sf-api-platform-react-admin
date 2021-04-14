@@ -10,6 +10,7 @@ import EntiteCreate from "./components/Entite/EntiteCreate";
 import EntiteEdit from "./components/Entite/EntiteEdit";
 import EntiteShow from "./components/Entite/EntiteShow";
 import EntiteList from "./components/Entite/EntiteList";
+import authProvider from './components/authProvider';
 // domain translations
 // require('./i18n/fr');
 
@@ -19,7 +20,7 @@ const i8nProvider = polyglotI18nProvider(() => frenchMessages, 'fr');
 // const i8nProvider = polyglotI18nProvider(locale => messages);
 console.log(process.env.ENTRY_POINT_API)
 const App = () => (
-    <HydraAdmin entrypoint={dataProvider} layout={BaseLayout} i18nProvider={i8nProvider} locale="fr">
+    <HydraAdmin entrypoint={dataProvider} authProvider={authProvider} layout={BaseLayout} i18nProvider={i8nProvider} locale="fr">
         <ResourceGuesser name="users" create={UserCreate} options={{label: "Utilisateurs"}}/>
         <ResourceGuesser name="profiles" options={{label: "Profiles"}}/>
         <ResourceGuesser name="sites" options={{label: "Sites"}}/>
