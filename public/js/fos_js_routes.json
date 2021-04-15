@@ -1,0 +1,1 @@
+{"base_url":"","routes":{"api_login_check":{"tokens":[["text","\/authentication_token"]],"defaults":[],"requirements":[],"hosttokens":[],"methods":[],"schemes":[]}},"prefix":"","host":"localhost:8001","port":"","scheme":"http","locale":[]}

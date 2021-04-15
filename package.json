@@ -21,6 +21,7 @@
         "@api-platform/admin": "^2.6.0",
         "@babel/preset-react": "^7.13.13",
         "dotenv": "^8.2.0",
+        "fos-routing": "0.0.6",
         "jwt-decode": "^3.1.2",
         "prop-types": "^15.7.2",
         "ra-data-json-server": "^3.14.1",

@@ -1,9 +1,9 @@
 // in src/authProvider.js
 import decodeJwt from 'jwt-decode';
-
+import Router from '../Router';
 export default {
     login: ({username, password}) => {
-        const request = new Request('http://localhost:8001/authentication_token', {
+        const request = new Request(Router.generate('api_login_check'), {
             method: 'POST',
             body: JSON.stringify({username, password}),
             headers: new Headers({'Content-Type': 'application/json'}),
