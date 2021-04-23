@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0bcc3903-7e1b-41c1-9dff-613ac68f41f8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,8 +30,8 @@
           <file leaf-file-name="UserPromoteRoleCommand.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Command/UserPromoteRoleCommand.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="200">
-                  <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="52" />
+                <state relative-caret-position="305">
+                  <caret line="44" column="29" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
                   <folding>
                     <element signature="e#31#51#0#PHP" expanded="true" />
                   </folding>
@@ -41,11 +39,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="UserChangePasswordCommand.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="UserChangePasswordCommand.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Command/UserChangePasswordCommand.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="381">
-                  <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+                <state relative-caret-position="405">
+                  <caret line="42" column="32" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
                   <folding>
                     <element signature="e#31#51#0#PHP" expanded="true" />
                   </folding>
@@ -53,11 +51,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name=".env" pinned="false" current-in-tab="false">
+          <file leaf-file-name=".env" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/.env">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="42" column="24" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="24" />
+                <state relative-caret-position="368">
+                  <caret line="37" column="40" lean-forward="true" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -282,11 +280,11 @@
         <option value="$PROJECT_DIR$/config/packages/fos_js_routing.yaml" />
         <option value="$PROJECT_DIR$/assets/components/authProvider.js" />
         <option value="$PROJECT_DIR$/assets/Router.js" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/.env.local.php" />
         <option value="$PROJECT_DIR$/config/services.yaml" />
         <option value="$PROJECT_DIR$/src/Command/UserPromoteRoleCommand.php" />
         <option value="$PROJECT_DIR$/src/Command/UserChangePasswordCommand.php" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -562,18 +560,18 @@
       <workItem from="1618399376773" duration="2247000" />
       <workItem from="1618472834834" duration="1767000" />
       <workItem from="1618809170440" duration="1783000" />
-      <workItem from="1619067522969" duration="6180000" />
+      <workItem from="1619067522969" duration="6403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113732000" />
+    <option name="totallyTimeSpent" value="113955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18869936" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18869936" />
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -582,7 +580,7 @@
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.32882273" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.27233115" />
+      <window_info anchor="bottom" id="Terminal" order="4" visible="true" weight="0.34313726" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
@@ -870,13 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -941,8 +932,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Command/UserPromoteRoleCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="52" />
+        <state relative-caret-position="305">
+          <caret line="44" column="29" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
           <folding>
             <element signature="e#31#51#0#PHP" expanded="true" />
           </folding>
@@ -951,11 +942,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Command/UserChangePasswordCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        <state relative-caret-position="405">
+          <caret line="42" column="32" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
           <folding>
             <element signature="e#31#51#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="37" column="40" lean-forward="true" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
         </state>
       </provider>
     </entry>
