@@ -7,6 +7,8 @@ parameters:
     router.request_context.host: '%env(string:HOST)%'
     router.request_context.scheme: '%env(string:SCHEME)%'
 
+    roles: [ROLE_SUPER_ADMIN, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH, ROLE_USER, ROLE_CAISSE, ROLE_RESPONSABLE_STOCK, ROLE_PRODUCTION, ROLE_CUISINIER, ROLE_SERVEUR]
+
 services:
     # default configuration for services in *this* file
     _defaults:
