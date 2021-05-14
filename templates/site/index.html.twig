@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Site index{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid pl-5">
+        <div class="card">
+            <h1 class="card-header">Liste sites</h1>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Libelle</th>
+                        <th>Code</th>
+                        <th>actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+					{% for site in sites %}
+                        <tr>
+                            <td>{{ site.id }}</td>
+                            <td>{{ site.libelle }}</td>
+                            <td>{{ site.code }}</td>
+                            <td>
+                                <a href="{{ path('site_show', {'id': site.id}) }}">show</a>
+                                <a href="{{ path('site_edit', {'id': site.id}) }}">edit</a>
+                            </td>
+                        </tr>
+					{% else %}
+                        <tr>
+                            <td colspan="4">no records found</td>
+                        </tr>
+					{% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-info" href="{{ path('site_new') }}">Nouveau</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

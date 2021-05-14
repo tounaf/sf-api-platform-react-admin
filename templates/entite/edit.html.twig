@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Entite{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid pl-5">
+        <div class="card">
+            <h1 class="card-header">Editer entité</h1>
+            <div class="card-body">
+				{{ include('entite/_form.html.twig', {'button_label': 'Update'}) }}
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-info" href="{{ path('entite_index') }}">Retour à la liste</a>
+                <a class="btn btn-success" href="{{ path('entite_new') }}">Nouveau</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

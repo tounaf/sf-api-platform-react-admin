@@ -39,11 +39,6 @@ class EntiteType
      */
     private $code;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Entite::class, mappedBy="entiteType")
-     */
-    private $entites;
-
     public function __construct()
     {
         $this->entites = new ArrayCollection();
@@ -78,33 +73,4 @@ class EntiteType
         return $this;
     }
 
-    /**
-     * @return Collection|Entite[]
-     */
-    public function getEntites(): Collection
-    {
-        return $this->entites;
-    }
-
-    public function addEntite(Entite $entite): self
-    {
-        if (!$this->entites->contains($entite)) {
-            $this->entites[] = $entite;
-            $entite->setEntiteType($this);
-        }
-
-        return $this;
-    }
-
-    public function removeEntite(Entite $entite): self
-    {
-        if ($this->entites->removeElement($entite)) {
-            // set the owning side to null (unless already changed)
-            if ($entite->getEntiteType() === $this) {
-                $entite->setEntiteType(null);
-            }
-        }
-
-        return $this;
-    }
 }

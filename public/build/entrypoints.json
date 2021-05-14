@@ -2,29 +2,29 @@
   "entrypoints": {
     "app": {
       "js": [
-        "/build/runtime.c2b5f79a.js",
-        "/build/23.ffdaa620.js",
-        "/build/363.5ca46b49.js",
-        "/build/app.825d16f2.js"
+        "/build/runtime.js",
+        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_expo-1b1321.js",
+        "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-09d390.js",
+        "/build/app.js"
       ],
       "css": [
-        "/build/app.b75294ae.css"
+        "/build/app.css"
       ]
     },
     "index": {
       "js": [
-        "/build/runtime.c2b5f79a.js",
-        "/build/660.e516ad98.js",
-        "/build/23.ffdaa620.js",
-        "/build/622.f592eb5d.js",
-        "/build/index.d29cedf5.js"
+        "/build/runtime.js",
+        "/build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc.js",
+        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_expo-1b1321.js",
+        "/build/vendors-node_modules_api-platform_admin_lib_index_js-node_modules_material-ui_icons_Label_js--a1efad.js",
+        "/build/index.js"
       ]
     },
     "home": {
       "js": [
-        "/build/runtime.c2b5f79a.js",
-        "/build/660.e516ad98.js",
-        "/build/home.69cee111.js"
+        "/build/runtime.js",
+        "/build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc.js",
+        "/build/home.js"
       ]
     }
   }

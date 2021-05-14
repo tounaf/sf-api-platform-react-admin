@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EntiteType{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid pl-5">
+        <div class="card">
+            <h1 class="card-header">Type entité</h1>
+            <div class="card-body">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ entite_type.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Libelle</th>
+                        <td>{{ entite_type.libelle }}</td>
+                    </tr>
+                    <tr>
+                        <th>Code</th>
+                        <td>{{ entite_type.code }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+
+                <a class="btn btn-info" href="{{ path('entite_type_index') }}">Retour à la liste</a>
+
+                <a class="btn btn-warning" href="{{ path('entite_type_edit', {'id': entite_type.id}) }}">Editer</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

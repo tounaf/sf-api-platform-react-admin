@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Entite{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid pl-5">
+        <div class="card">
+            <h1 class="card-header">Nouveau entité</h1>
+            <div class="card-body">
+				{{ include('entite/_form.html.twig') }}
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-success" href="{{ path('entite_new') }}">Retour à la liste</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

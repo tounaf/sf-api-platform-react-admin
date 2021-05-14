@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid pl-5">
+        <div class="card">
+            <h1 class="card-header">Nouveau profile</h1>
+            <div class="card-body">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ profile.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Libelle</th>
+                        <td>{{ profile.libelle }}</td>
+                    </tr>
+                    <tr>
+                        <th>Code</th>
+                        <td>{{ profile.code }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-info" href="{{ path('profile_index') }}">Retour à la liste</a>
+                <a class="btn btn-success" href="{{ path('profile_new') }}">Nouveau</a>
+                <a class="btn btn-warning" href="{{ path('profile_edit', {'id': profile.id}) }}">Edit</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

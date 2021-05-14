@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid pl-5">
+        <div class="card">
+            <h1 class="card-header">Editer utilisateur</h1>
+            <div class="card-body">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ user.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>{{ user.email }}</td>
+                    </tr>
+                    <tr>
+                        <th>Login</th>
+                        <td>{{ user.login }}</td>
+                    </tr>
+                    <tr>
+                        <th>Username</th>
+                        <td>{{ user.username }}</td>
+                    </tr>
+                    <tr>
+                        <th>Roles</th>
+                        <td>{{ user.roles ? user.roles|join(', ') : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>Nom</th>
+                        <td>{{ user.nom }}</td>
+                    </tr>
+                    <tr>
+                        <th>Prenom</th>
+                        <td>{{ user.prenom }}</td>
+                    </tr>
+                    <tr>
+                        <th>SituationMatrimoniale</th>
+                        <td>{{ user.situationMatrimoniale }}</td>
+                    </tr>
+                    <tr>
+                        <th>Civilite</th>
+                        <td>{{ user.civilite }}</td>
+                    </tr>
+                    <tr>
+                        <th>DateDeNaissance</th>
+                        <td>{{ user.dateDeNaissance ? user.dateDeNaissance|date('Y-m-d H:i:s') : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>PhotoProfile</th>
+                        <td>{{ user.photoProfile }}</td>
+                    </tr>
+                    <tr>
+                        <th>Competence</th>
+                        <td>{{ user.competence }}</td>
+                    </tr>
+                    <tr>
+                        <th>DateEntree</th>
+                        <td>{{ user.dateEntree ? user.dateEntree|date('Y-m-d H:i:s') : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>DateSortie</th>
+                        <td>{{ user.dateSortie ? user.dateSortie|date('Y-m-d H:i:s') : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>Remarque</th>
+                        <td>{{ user.remarque }}</td>
+                    </tr>
+                    <tr>
+                        <th>Enable</th>
+                        <td>{{ user.enable ? 'Yes' : 'No' }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-info" href="{{ path('user_index') }}">Retour à la liste</a>
+                <a class="btn btn-warning" href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
