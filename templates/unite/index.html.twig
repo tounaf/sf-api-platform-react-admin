@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Unite index{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid pl-5">
+        <div class="card">
+            <h1 class="card-header">Unite</h1>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Libelle</th>
+                        <th>Code</th>
+                        <th>actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+					{% for unite in unites %}
+                        <tr>
+                            <td>{{ unite.id }}</td>
+                            <td>{{ unite.libelle }}</td>
+                            <td>{{ unite.code }}</td>
+                            <td>
+                                <a href="{{ path('unite_show', {'id': unite.id}) }}">show</a>
+                                <a href="{{ path('unite_edit', {'id': unite.id}) }}">edit</a>
+                            </td>
+                        </tr>
+					{% else %}
+                        <tr>
+                            <td colspan="4">no records found</td>
+                        </tr>
+					{% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-success" href="{{ path('unite_new') }}">Nouveau</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
