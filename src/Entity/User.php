@@ -18,6 +18,7 @@ use Symfony\Component\Serializer\Annotation\SerializedName;
  * )
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @ORM\Table(name="`user`")
+ * @ORM\HasLifecycleCallbacks()
  *
  */
 class User implements UserInterface
@@ -418,4 +419,19 @@ class User implements UserInterface
 
         return $this;
     }
+
+
+    /**
+     * @ORM\PrePersist()
+     * @ORM\PreUpdate()
+     */
+    public function setRoleUser()
+    {
+        $roles = [];
+        foreach ($this->profiles as $profile) {
+            array_push($roles, $profile->getCode());
+        }
+        $this->setRoles($roles);
+    }
+
 }

@@ -44,4 +44,21 @@
 			</li>
 		</ul>
 	</li>
+	<li class="nav-item has-treeview {% if app.request.get('_route') in router_name_stock %} menu-open {% endif %}">
+		<a href="#" class="nav-link {% if app.request.get('_route') in router_name_parametrage %} active {% endif %}">
+			<i class="nav-icon fas fa-tachometer-alt"></i>
+			<p>
+				Stockage
+				<i class="right fas fa-angle-left"></i>
+			</p>
+		</a>
+		<ul class="nav nav-treeview">
+			<li class="nav-item">
+				<a href="{{ path('ingredient_index') }}" class="nav-link {% if app.request.get('_route') == 'ingredient_index' %} active {% endif %}">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Entrée</p>
+				</a>
+			</li>
+		</ul>
+	</li>
 </ul>

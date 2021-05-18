@@ -8,7 +8,8 @@ parameters:
     router.request_context.scheme: '%env(string:SCHEME)%'
 
     roles: [ROLE_SUPER_ADMIN, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH, ROLE_USER, ROLE_CAISSE, ROLE_RESPONSABLE_STOCK, ROLE_PRODUCTION, ROLE_CUISINIER, ROLE_SERVEUR]
-    router_parametrage: ['user_index', 'profile_index', 'site_index', 'entite_index', 'entite_type_index']
+    router_parametrage: ['user_index', 'user_edit', 'user_new', 'user_show', 'profile_index', 'profile_edit', 'profile_new','profile_show','site_index', 'site_edit', 'site_new','site_show', 'entite_index', 'entite_edit', 'entite_new','entite_show', 'entite_type_index', 'entite_type_edit', 'entite_type_new', 'entite_type_show']
+    router_stock: ['ingredient_index', 'ingredient_edit', 'ingredient_new', 'ingredient_show']
 
 services:
     # default configuration for services in *this* file
@@ -37,5 +38,9 @@ services:
 
     App\Listener\UserListener:
         tags:
-            - { name: doctrine.entity_listener, event: prePersist, method: prePersist, lazy: true}
+            - { name: doctrine.entity_listener, entity: 'App\Entity\User', event: prePersist, method: prePersist, lazy: true}
+
+    App\Listener\IngredientListener:
+            tags:
+                - { name: doctrine.entity_listener, entity: 'App\Entity\Ingredient', event: prePersist, method: prePersist, lazy: true}
 
