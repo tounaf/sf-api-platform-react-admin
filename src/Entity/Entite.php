@@ -68,11 +68,17 @@ class Entite
      */
     private $site;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Achat::class, mappedBy="entite", orphanRemoval=true)
+     */
+    private $yes;
+
     public function __construct()
     {
         $this->users = new ArrayCollection();
         $this->createAt = new \DateTime();
         $this->updatedAt = new \DateTime();
+        $this->yes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -188,5 +194,35 @@ class Entite
     public function preUpdate()
     {
         $this->updatedAt = new \DateTime();
+    }
+
+    /**
+     * @return Collection|Achat[]
+     */
+    public function getYes(): Collection
+    {
+        return $this->yes;
+    }
+
+    public function addYe(Achat $ye): self
+    {
+        if (!$this->yes->contains($ye)) {
+            $this->yes[] = $ye;
+            $ye->setEntite($this);
+        }
+
+        return $this;
+    }
+
+    public function removeYe(Achat $ye): self
+    {
+        if ($this->yes->removeElement($ye)) {
+            // set the owning side to null (unless already changed)
+            if ($ye->getEntite() === $this) {
+                $ye->setEntite(null);
+            }
+        }
+
+        return $this;
     }
 }
