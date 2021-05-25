@@ -647,7 +647,7 @@ module.exports = JSON.parse('{"base_url":"","routes":{"api_login_check":{"tokens
 /******/ "use strict";
 /******/ 
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc","vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_expo-1b1321","vendors-node_modules_api-platform_admin_lib_index_js-node_modules_material-ui_icons_Label_js--a1efad"], () => (__webpack_exec__("./assets/index.js")));
+/******/ __webpack_require__.O(0, ["vendors-node_modules_react-dom_index_js","vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_expo-1b1321","vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc","vendors-node_modules_api-platform_admin_lib_index_js-node_modules_material-ui_icons_Label_js--a1efad"], () => (__webpack_exec__("./assets/index.js")));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);

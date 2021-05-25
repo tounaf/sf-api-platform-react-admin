@@ -1,4 +1,9 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
+    <div id="details"></div>
+    {{ form_rest(form) }}
+    <button type="button"
+            class="add-another-collection-widget"
+            data-list-selector="#email-fields-list">Add another email</button>
     <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
+{{ encore_entry_script_tags('details') }}
