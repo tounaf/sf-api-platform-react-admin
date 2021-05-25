@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bcc3903-7e1b-41c1-9dff-613ac68f41f8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/components/achat/detailsAchat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/components/achat/detailsAchat.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/components/achat/detailsAchat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/build/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/entrypoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/entrypoints.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/details.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/details.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/build/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-09d390.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Achat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Achat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/AchatType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AchatType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/achat/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/achat/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/achat/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/achat/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/achat/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/achat/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/achat/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/achat/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/achat/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/achat/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +26,8 @@
       <file leaf-file-name="_form.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/achat/_form.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+            <state relative-caret-position="30">
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -43,11 +35,38 @@
       <file leaf-file-name="detailsAchat.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/components/achat/detailsAchat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+            <state relative-caret-position="319">
+              <caret line="56" column="40" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AchatType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Form/AchatType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Achat.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Achat.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DetailAchat.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/DetailAchat.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -138,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/app.js" />
         <option value="$PROJECT_DIR$/src/Entity/EntiteType.php" />
         <option value="$PROJECT_DIR$/src/Controller/EntiteTypeController.php" />
         <option value="$PROJECT_DIR$/templates/Listener/EncodeUserPassword.php" />
@@ -183,11 +201,12 @@
         <option value="$PROJECT_DIR$/templates/achat/new.html.twig" />
         <option value="$PROJECT_DIR$/templates/achat/show.html.twig" />
         <option value="$PROJECT_DIR$/templates/achat/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/Form/AchatType.php" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/templates/achat/_form.html.twig" />
         <option value="$PROJECT_DIR$/assets/home.js" />
+        <option value="$PROJECT_DIR$/templates/achat/_form.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Achat.php" />
+        <option value="$PROJECT_DIR$/src/Form/AchatType.php" />
         <option value="$PROJECT_DIR$/assets/components/achat/detailsAchat.js" />
       </list>
     </option>
@@ -477,18 +496,18 @@
       <workItem from="1620988391316" duration="7226000" />
       <workItem from="1621233871405" duration="15281000" />
       <workItem from="1621400121838" duration="2395000" />
-      <workItem from="1621922619984" duration="7133000" />
+      <workItem from="1621922619984" duration="9043000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161496000" />
+    <option name="totallyTimeSpent" value="163406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="553" y="45" width="1374" height="938" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.22526637" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.22526637" />
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -497,7 +516,7 @@
       <window_info anchor="bottom" id="Run" order="7" weight="0.32882273" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.35375" />
+      <window_info anchor="bottom" id="Terminal" order="4" visible="true" weight="0.35375" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -517,13 +536,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/entite_type/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Listener/IngredientListener.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
@@ -754,13 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Achat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/EntiteType.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -775,13 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="45" column="14" selection-start-line="39" selection-start-column="12" selection-end-line="45" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/AchatType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -858,15 +856,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/achat/_form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        <state relative-caret-position="30">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/AchatType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Achat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/DetailAchat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/components/achat/detailsAchat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        <state relative-caret-position="319">
+          <caret line="56" column="40" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>

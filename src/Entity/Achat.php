@@ -46,6 +46,7 @@ class Achat
     public function __construct()
     {
         $this->details = new ArrayCollection();
+        $this->createAt = new \DateTime();
     }
 
     public function getId(): ?int
