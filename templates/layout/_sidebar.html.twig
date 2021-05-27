@@ -56,7 +56,13 @@
 			<li class="nav-item">
 				<a href="{{ path('ingredient_index') }}" class="nav-link {% if app.request.get('_route') == 'ingredient_index' %} active {% endif %}">
 					<i class="far fa-circle nav-icon"></i>
-					<p>Entrée</p>
+					<p>Ingredient</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="{{ path('achat_index') }}" class="nav-link {% if app.request.get('_route') == 'achat_index' %} active {% endif %}">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Achat</p>
 				</a>
 			</li>
 		</ul>

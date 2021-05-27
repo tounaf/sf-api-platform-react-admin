@@ -32,23 +32,23 @@ function App() {
         return (
             <div className="box row" key={i}>
                 <input
-                    name="produit"
+                    name={"achat[details][" + i +"][ingredient]"}
                     className="form-control col-md-3"
-                    placeholder="Enter First Name"
+                    placeholder="Ingredient"
                     value={x.produit}
                     onChange={e => handleInputChange(e, i)}
                 />
                 <input
                     className="form-control ml10 col-md-3"
-                    name="quantite"
-                    placeholder="Enter Last Name"
+                    name={"achat[details][" + i +"][quantite]"}
+                    placeholder="Quantité"
                     value={x.quantite}
                     onChange={e => handleInputChange(e, i)}
                 />
                 <input
                     className="form-control ml10 col-md-3"
-                    name="prix"
-                    placeholder="Enter Last Name"
+                    name={"achat[details][" + i +"][prixUnitaire]"}
+                    placeholder="Prix Unitaire"
                     value={x.prix}
                     onChange={e => handleInputChange(e, i)}
                 />

@@ -20,6 +20,14 @@ class AchatType extends AbstractType
                 'class' => Entite::class,
                 'choice_label' => 'libelle'
             ))
+            ->add('details', CollectionType::class, [
+                'entry_type' => DetailAchatType::class,
+                'label' => 'Details',
+                // each entry in the array will be an "email" field
+                // these options are passed to each "email" type
+                'allow_add' => true,
+                'allow_delete' => true
+            ])
         ;
     }
 
