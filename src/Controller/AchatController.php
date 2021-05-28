@@ -43,8 +43,6 @@ class AchatController extends AbstractController
         }
 
         return $this->render('achat/new.html.twig', [
-            'achat' => $achat,
-            'form' => $form->createView(),
         ]);
     }
 
