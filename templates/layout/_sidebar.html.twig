@@ -45,7 +45,7 @@
 		</ul>
 	</li>
 	<li class="nav-item has-treeview {% if app.request.get('_route') in router_name_stock %} menu-open {% endif %}">
-		<a href="#" class="nav-link {% if app.request.get('_route') in router_name_parametrage %} active {% endif %}">
+		<a href="#" class="nav-link {% if app.request.get('_route') in router_name_stock %} active {% endif %}">
 			<i class="nav-icon fas fa-tachometer-alt"></i>
 			<p>
 				Stockage
@@ -63,6 +63,29 @@
 				<a href="{{ path('achat_index') }}" class="nav-link {% if app.request.get('_route') == 'achat_index' %} active {% endif %}">
 					<i class="far fa-circle nav-icon"></i>
 					<p>Achat</p>
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-item has-treeview {% if app.request.get('_route') in router_name_production %} menu-open {% endif %}">
+		<a href="#" class="nav-link {% if app.request.get('_route') in router_name_production %} active {% endif %}">
+			<i class="nav-icon fas fa-tachometer-alt"></i>
+			<p>
+				Production
+				<i class="right fas fa-angle-left"></i>
+			</p>
+		</a>
+		<ul class="nav nav-treeview">
+			<li class="nav-item">
+				<a href="{{ path('produit_index') }}" class="nav-link {% if app.request.get('_route') == 'produit_index' %} active {% endif %}">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Produit</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="{{ path('formule_produit_index') }}" class="nav-link {% if app.request.get('_route') == 'formule_produit_index' %} active {% endif %}">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Formule Produit</p>
 				</a>
 			</li>
 		</ul>

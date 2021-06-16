@@ -10,15 +10,14 @@ function App() {
 
     useEffect(() => {
         getList();
+        console.log(ingredients);
     }, []);
 
     const getList = () => {
         ingredientService.getAll()
             .then(res => {
-                setIngredients(res.data)
-            console.log(res.data);
-            console.log(ingredients);
-        })
+                setIngredients({ingredients: res.data})
+            })
     };
 
     // handle input change

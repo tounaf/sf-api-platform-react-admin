@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\ProduitRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -38,6 +40,21 @@ class Produit
      * @ORM\ManyToOne(targetEntity=ProduitType::class)
      */
     private $typeProduit;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $prix;
+
+    /**
+     * @ORM\OneToMany(targetEntity=FormuleProduit::class, mappedBy="produit", orphanRemoval=true)
+     */
+    private $formuleProduits;
+
+    public function __construct()
+    {
+        $this->formuleProduits = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -88,6 +105,49 @@ class Produit
     public function setTypeProduit(?ProduitType $typeProduit): self
     {
         $this->typeProduit = $typeProduit;
+
+        return $this;
+    }
+
+    public function getPrix(): ?float
+    {
+        return $this->prix;
+    }
+
+    public function setPrix(float $prix): self
+    {
+        $this->prix = $prix;
+
+        return $this;
+    }
+
+
+    /**
+     * @return Collection|FormuleProduit[]
+     */
+    public function getFormuleProduits(): Collection
+    {
+        return $this->formuleProduits;
+    }
+
+    public function addFormuleProduit(FormuleProduit $formuleProduit): self
+    {
+        if (!$this->formuleProduits->contains($formuleProduit)) {
+            $this->formuleProduits[] = $formuleProduit;
+            $formuleProduit->setProduit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFormuleProduit(FormuleProduit $formuleProduit): self
+    {
+        if ($this->formuleProduits->removeElement($formuleProduit)) {
+            // set the owning side to null (unless already changed)
+            if ($formuleProduit->getProduit() === $this) {
+                $formuleProduit->setProduit(null);
+            }
+        }
 
         return $this;
     }

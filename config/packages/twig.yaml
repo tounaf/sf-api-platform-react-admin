@@ -4,3 +4,4 @@ twig:
     globals:
         router_name_parametrage: '%router_parametrage%'
         router_name_stock: '%router_stock%'
+        router_name_production: '%router_production%'
