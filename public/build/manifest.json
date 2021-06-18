@@ -3,9 +3,21 @@
   "build/app.js": "/build/app.js",
   "build/index.js": "/build/index.js",
   "build/home.js": "/build/home.js",
+<<<<<<< HEAD
   "build/runtime.js": "/build/runtime.js",
   "build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc.js": "/build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc.js",
   "build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_expo-1b1321.js": "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_expo-1b1321.js",
   "build/vendors-node_modules_api-platform_admin_lib_index_js-node_modules_material-ui_icons_Label_js--a1efad.js": "/build/vendors-node_modules_api-platform_admin_lib_index_js-node_modules_material-ui_icons_Label_js--a1efad.js",
+=======
+  "build/details.js": "/build/details.js",
+  "build/runtime.js": "/build/runtime.js",
+  "build/vendors-node_modules_react-dom_index_js.js": "/build/vendors-node_modules_react-dom_index_js.js",
+  "build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_expo-1b1321.js": "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_expo-1b1321.js",
+  "build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc.js": "/build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc.js",
+  "build/vendors-node_modules_core-js_modules_es_string_iterator_js-node_modules_core-js_modules_es_sy-0eab75.js": "/build/vendors-node_modules_core-js_modules_es_string_iterator_js-node_modules_core-js_modules_es_sy-0eab75.js",
+  "build/vendors-node_modules_api-platform_admin_lib_index_js-node_modules_material-ui_icons_Label_js--a1efad.js": "/build/vendors-node_modules_api-platform_admin_lib_index_js-node_modules_material-ui_icons_Label_js--a1efad.js",
+  "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-1c4c4d.js": "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-1c4c4d.js",
+  "build/vendors-node_modules_axios_index_js-node_modules_core-js_modules_es_array_concat_js-node_modu-d05486.js": "/build/vendors-node_modules_axios_index_js-node_modules_core-js_modules_es_array_concat_js-node_modu-d05486.js",
+>>>>>>> 81712ce7eadc20f1857eb9bd5ac5f1f94bfa8259
   "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-09d390.js": "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-09d390.js"
 }

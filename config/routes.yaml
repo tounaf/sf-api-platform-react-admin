@@ -3,5 +3,3 @@
 #    controller: App\Controller\DefaultController::index
 api_login_check:
     path: /authentication_token
-app_login:
-    path: /login-form

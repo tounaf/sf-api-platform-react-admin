@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New FormuleDetail{% endblock %}
+
+{% block body %}
+    <h1>Create new FormuleDetail</h1>
+
+    {{ include('formule_detail/_form.html.twig') }}
+
+    <a href="{{ path('formule_detail_index') }}">back to list</a>
+{% endblock %}

@@ -1,3 +1,7 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
     form_themes: ['bootstrap_4_layout.html.twig']
+    globals:
+        router_name_parametrage: '%router_parametrage%'
+        router_name_stock: '%router_stock%'
+        router_name_production: '%router_production%'

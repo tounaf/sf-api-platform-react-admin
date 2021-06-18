@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProduitType{% endblock %}
+
+{% block body %}
+    <h1>Create new ProduitType</h1>
+
+    {{ include('produit_type/_form.html.twig') }}
+
+    <a href="{{ path('produit_type_index') }}">back to list</a>
+{% endblock %}

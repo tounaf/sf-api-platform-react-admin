@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Achat{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid pl-5">
+        <div class="card">
+            <h1 class="card-header">Details</h1>
+            <div class="card-body">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ achat.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>CreateAt</th>
+                        <td>{{ achat.createAt ? achat.createAt|date('Y-m-d H:i:s') : '' }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-success" href="{{ path('achat_new') }}">Nouveau</a>
+                <a class="btn btn-warning" href="{{ path('achat_edit', {'id': achat.id}) }}">edit</a>
+                <a class="btn btn-warning" href="{{ path('achat_index') }}">edit</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

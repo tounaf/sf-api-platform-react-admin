@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EntiteType index{% endblock %}
+
+{% block body %}
+
+
+    <div class="container-fluid pl-5">
+        <div class="card">
+            <h1 class="card-header">Liste Type entité</h1>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Libelle</th>
+                        <th>Code</th>
+                        <th>actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+					{% for entite_type in entite_types %}
+                        <tr>
+                            <td>{{ entite_type.id }}</td>
+                            <td>{{ entite_type.libelle }}</td>
+                            <td>{{ entite_type.code }}</td>
+                            <td>
+                                <a href="{{ path('entite_type_show', {'id': entite_type.id}) }}">show</a>
+                                <a href="{{ path('entite_type_edit', {'id': entite_type.id}) }}">edit</a>
+                            </td>
+
+                        </tr>
+					{% else %}
+                        <tr>
+                            <td colspan="4">no records found</td>
+                        </tr>
+					{% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -224,7 +224,11 @@ var __assign = (undefined && undefined.__assign) || function () {
 /******/ "use strict";
 /******/ 
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+<<<<<<< HEAD
 /******/ __webpack_require__.O(0, ["vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc"], () => (__webpack_exec__("./assets/home.js")));
+=======
+/******/ __webpack_require__.O(0, ["vendors-node_modules_react-dom_index_js","vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc"], () => (__webpack_exec__("./assets/home.js")));
+>>>>>>> 81712ce7eadc20f1857eb9bd5ac5f1f94bfa8259
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);

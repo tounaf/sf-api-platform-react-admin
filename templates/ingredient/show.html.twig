@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ingredient{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid pl-5">
+        <div class="card">
+            <h1 class="card-header">Editer Ingredient</h1>
+            <div class="card-body">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ ingredient.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Libelle</th>
+                        <td>{{ ingredient.libelle }}</td>
+                    </tr>
+                    <tr>
+                        <th>Quantite</th>
+                        <td>{{ ingredient.quantite }}</td>
+                    </tr>
+                    <tr>
+                        <th>CreatedAt</th>
+                        <td>{{ ingredient.createdAt ? ingredient.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>UpdatedAt</th>
+                        <td>{{ ingredient.updatedAt ? ingredient.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-success" href="{{ path('ingredient_index') }}">Nouveau</a>
+                <a class="btn btn-info" href="{{ path('ingredient_index') }}">Retour à la liste</a>
+                <a class="btn btn-warning" href="{{ path('ingredient_edit', {'id': ingredient.id}) }}">edit</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

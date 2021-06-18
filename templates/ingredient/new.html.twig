@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Ingredient{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid pl-5">
+        <div class="card">
+            <h1 class="card-header">Nouveau Ingredient</h1>
+            <div class="card-body">
+				{{ include('ingredient/_form.html.twig') }}
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-info" href="{{ path('ingredient_index') }}">back to list</a>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

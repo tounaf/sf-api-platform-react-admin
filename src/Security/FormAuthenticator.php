@@ -48,13 +48,13 @@ class FormAuthenticator extends AbstractFormLoginAuthenticator implements Passwo
     public function getCredentials(Request $request)
     {
         $credentials = [
-            'email' => $request->request->get('email'),
+            'username' => $request->request->get('username'),
             'password' => $request->request->get('password'),
             'csrf_token' => $request->request->get('_csrf_token'),
         ];
         $request->getSession()->set(
             Security::LAST_USERNAME,
-            $credentials['email']
+            $credentials['username']
         );
 
         return $credentials;
@@ -67,7 +67,7 @@ class FormAuthenticator extends AbstractFormLoginAuthenticator implements Passwo
             throw new InvalidCsrfTokenException();
         }
 
-        $user = $this->entityManager->getRepository(User::class)->findOneBy(['email' => $credentials['email']]);
+        $user = $this->entityManager->getRepository(User::class)->findOneBy(['username' => $credentials['username']]);
 
         if (!$user) {
             // fail authentication with a custom error
@@ -96,7 +96,7 @@ class FormAuthenticator extends AbstractFormLoginAuthenticator implements Passwo
             return new RedirectResponse($targetPath);
         }
 
-        // For example : return new RedirectResponse($this->urlGenerator->generate('some_route'));
+        return new RedirectResponse($this->urlGenerator->generate('user_index'));
         throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
 

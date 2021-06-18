@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profile index{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid pl-5">
+        <div class="card">
+            <h1 class="card-header">Liste profiles</h1>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Libelle</th>
+                        <th>Code</th>
+                        <th>actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+					{% for profile in profiles %}
+                        <tr>
+                            <td>{{ profile.id }}</td>
+                            <td>{{ profile.libelle }}</td>
+                            <td>{{ profile.code }}</td>
+                            <td>
+                                <a class="btn btn-info" href="{{ path('profile_show', {'id': profile.id}) }}">show</a>
+                                <a class="btn btn-warning" href="{{ path('profile_edit', {'id': profile.id}) }}">edit</a>
+                            </td>
+                        </tr>
+					{% else %}
+                        <tr>
+                            <td colspan="4">no records found</td>
+                        </tr>
+					{% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-success" href="{{ path('profile_new') }}">Nouveau</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
