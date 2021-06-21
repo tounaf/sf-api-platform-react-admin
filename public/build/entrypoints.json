@@ -4,8 +4,8 @@
       "js": [
         "/build/runtime.js",
         "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_expo-1b1321.js",
-        "/build/vendors-node_modules_core-js_modules_es_string_iterator_js-node_modules_core-js_modules_es_sy-0eab75.js",
-        "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-1c4c4d.js",
+        "/build/vendors-node_modules_core-js_modules_es_object_create_js-node_modules_core-js_modules_es_obje-94261a.js",
+        "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js.js",
         "/build/app.js"
       ],
       "css": [
@@ -35,8 +35,8 @@
         "/build/runtime.js",
         "/build/vendors-node_modules_react-dom_index_js.js",
         "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_expo-1b1321.js",
-        "/build/vendors-node_modules_core-js_modules_es_string_iterator_js-node_modules_core-js_modules_es_sy-0eab75.js",
-        "/build/vendors-node_modules_axios_index_js-node_modules_core-js_modules_es_array_concat_js-node_modu-d05486.js",
+        "/build/vendors-node_modules_core-js_modules_es_object_create_js-node_modules_core-js_modules_es_obje-94261a.js",
+        "/build/vendors-node_modules_axios_index_js-node_modules_core-js_modules_es_array_concat_js-node_modu-2ec2be.js",
         "/build/details.js"
       ]
     }
