@@ -51,7 +51,10 @@ export default class IngredientList extends Component {
 
     // handle click event of the Add button
     handleAddClick = () => {
-        setInputList([...inputList, { produit: "", quantite: "", prix: "" }]);
+        this.setState(state =>{
+            inputList: [...state.inputList, { produit: "", quantite: "", prix: "" }]
+        });
+        console.log(this.state.inputList);
     };
 
     retrieveTutorials() {
@@ -110,7 +113,7 @@ export default class IngredientList extends Component {
 
         console.log(this.state);
         const { ingredients,currentTutorial,currentIndex,searchTitle,inputList } = this.state;
-        console.log(ingredients);
+        console.log(inputList);
         // ];
         return (
             <div className="App">
@@ -128,6 +131,7 @@ export default class IngredientList extends Component {
                     return (
                         <div className="box row" key={i}>
                         <select className="form-control col-md-3">
+                            <option></option>
                             {ingredients.map((ing, index) => (
                             <option value={ing.id} key={index}>{ing.libelle}</option>
                             ))}
@@ -157,7 +161,7 @@ export default class IngredientList extends Component {
                             {this.state.inputList.length !== 1 && <button
                         className="mr10 btn btn-danger"
                         onClick={() => this.handleRemoveClick(i)}>Remove</button>}
-                        {this.state.inputList.length - 1 === i && <button className="btn btn-success" onClick={this.handleAddClick}>Add</button>}
+                        {this.state.inputList.length - 1 === i && <button type="button" className="btn btn-success ajout" onClick={this.handleAddClick}>Add</button>}
                         </div>
                     </div>
                     );
