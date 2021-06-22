@@ -1,7 +1,7 @@
 {
     "devDependencies": {
         "@symfony/stimulus-bridge": "^2.0.0",
-        "@symfony/webpack-encore": "^1.3.0",
+        "@symfony/webpack-encore": "^1.5.0",
         "core-js": "^3.0.0",
         "regenerator-runtime": "^0.13.2",
         "stimulus": "^2.0.0",
@@ -18,9 +18,12 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "@api-platform/admin": "^2.6.0",
+        "@api-platform/admin": "^0.1.16",
         "@babel/preset-react": "^7.13.13",
         "axios": "^0.21.1",
+        "bootstrap": "^5.0.1",
+        "datatables.net": "^1.10.25",
+        "datatables.net-bs4": "^3.2.2",
         "dotenv": "^8.2.0",
         "fos-routing": "0.0.6",
         "jwt-decode": "^3.1.2",

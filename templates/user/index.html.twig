@@ -8,18 +8,19 @@
 		<div class="card">
 			<h1 class="card-header">Liste utilisateur</h1>
 			<div class="card-body">
-				<table class="table">
+				<table id="tbl-user" class="table table-striped table-bordered">
 					<thead>
 					<tr>
 						<th>Nom</th>
 						<th>Prenom</th>
 						<th>Email</th>
 						<th>DateEntree</th>
-						<th>Enable</th>
+						<th>Activé(e)</th>
 						<th>actions</th>
 					</tr>
 					</thead>
 					<tbody>
+				
 					{% for user in users %}
 						<tr>
 							<td>{{ user.nom }}</td>
@@ -34,7 +35,7 @@
 						</tr>
 					{% else %}
 						<tr>
-							<td colspan="18">no records found</td>
+							<td colspan="6">Aucune données trouvées</td>
 						</tr>
 					{% endfor %}
 					</tbody>
@@ -45,4 +46,6 @@
 			</div>
 		</div>
 	</div>
+
+	
 {% endblock %}

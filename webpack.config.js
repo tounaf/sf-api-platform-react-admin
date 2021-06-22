@@ -53,14 +53,14 @@ Encore
         config.plugins.push('@babel/plugin-proposal-class-properties');
     })
 
-    // enables @babel/preset-env polyfills
+    // enables @babel/preset-env polyfills - touky
     .configureBabelPresetEnv((config) => {
         config.useBuiltIns = 'usage';
         config.corejs = 3;
-    })
+    })//*/
 
     // enables Sass/SCSS support
-    //.enableSassLoader()
+    .enableSassLoader()
 
     // uncomment if you use TypeScript
     .enableTypeScriptLoader()
@@ -73,7 +73,7 @@ Encore
     //.enableIntegrityHashes(Encore.isProduction())
 
     // uncomment if you're having problems with a jQuery plugin
-    //.autoProvidejQuery()
+    .autoProvidejQuery()
     .configureDefinePlugin(options => {
         const env = dotenv.config();
 

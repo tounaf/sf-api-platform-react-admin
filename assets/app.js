@@ -9,4 +9,24 @@
 import './styles/app.css';
 
 // start the Stimulus application
-import './bootstrap';
+//import './bootstrap';
+
+
+
+// $('#tbl-user').DataTable();
+ $("#tbl-user").DataTable({
+    "responsive": true,
+    "autoWidth": false,
+    "searching": true,
+    "processing": true, 
+    'order' : [],
+    "language": {
+          "url": "/plugins/bootstrap/js/french.json"
+      },
+      "info":false,
+      "paging":true,
+      "lengthChange": true,
+    
+  });
+
+
