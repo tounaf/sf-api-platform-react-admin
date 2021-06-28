@@ -3,6 +3,9 @@
     "app": {
       "js": [
         "/build/runtime.js",
+        "/build/vendors-node_modules_core-js_internals_html_js-node_modules_core-js_internals_iterators_js-no-495b24.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_concat_js-node_modules_core-js_modules_es_array-0a7f32.js",
+        "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ar-6ccf61.js",
         "/build/app.js"
       ],
       "css": [
@@ -12,25 +15,28 @@
     "index": {
       "js": [
         "/build/runtime.js",
-        "/build/vendors~details~home~index.js",
-        "/build/vendors~home~index.js",
-        "/build/vendors~index.js",
+        "/build/vendors-node_modules_react-dom_index_js.js",
+        "/build/vendors-node_modules_core-js_internals_html_js-node_modules_core-js_internals_iterators_js-no-495b24.js",
+        "/build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc.js",
+        "/build/vendors-node_modules_api-platform_admin_lib_index_js-node_modules_material-ui_icons_Label_js--069d4e.js",
         "/build/index.js"
       ]
     },
     "home": {
       "js": [
         "/build/runtime.js",
-        "/build/vendors~details~home~index.js",
-        "/build/vendors~home~index.js",
+        "/build/vendors-node_modules_react-dom_index_js.js",
+        "/build/vendors-node_modules_ra-core_esm_core_Resource_js-node_modules_ra-core_esm_dataProvider_fetch-5d76cc.js",
         "/build/home.js"
       ]
     },
     "details": {
       "js": [
         "/build/runtime.js",
-        "/build/vendors~details~home~index.js",
-        "/build/vendors~details.js",
+        "/build/vendors-node_modules_react-dom_index_js.js",
+        "/build/vendors-node_modules_core-js_internals_html_js-node_modules_core-js_internals_iterators_js-no-495b24.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_concat_js-node_modules_core-js_modules_es_array-0a7f32.js",
+        "/build/vendors-node_modules_axios_index_js-node_modules_core-js_modules_es_array_from_js-node_module-2e3d6c.js",
         "/build/details.js"
       ]
     }

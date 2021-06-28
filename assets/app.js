@@ -9,12 +9,15 @@
 import './styles/app.css';
 
 // start the Stimulus application
-//import './bootstrap';
-
-
-
-// $('#tbl-user').DataTable();
- $("#tbl-user").DataTable({
+ import './bootstrap';
+window.$ = window.jQuery = require('jquery'); //changed
+//require('bootstrap');
+// require('datatables.net-bs4');
+import "/public/plugins/datatables/jquery.dataTables.min";
+import "/public/plugins/datatables-bs4/js/dataTables.bootstrap4.min";
+$(document).ready(function() {
+   
+ $("table.tb-liste").DataTable({
     "responsive": true,
     "autoWidth": false,
     "searching": true,
@@ -25,8 +28,9 @@ import './styles/app.css';
       },
       "info":false,
       "paging":true,
-      "lengthChange": true,
+      "lengthChange": true
     
   });
+ });
 
 

@@ -4,6 +4,8 @@
         "@symfony/webpack-encore": "^1.5.0",
         "core-js": "^3.0.0",
         "regenerator-runtime": "^0.13.2",
+        "sass": "^1.35.1",
+        "sass-loader": "^12.1.0",
         "stimulus": "^2.0.0",
         "ts-loader": "^8.0.1",
         "typescript": "^4.2.3",
@@ -18,7 +20,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "@api-platform/admin": "^0.1.16",
+        "@api-platform/admin": "^2.6.4",
         "@babel/preset-react": "^7.13.13",
         "axios": "^0.21.1",
         "bootstrap": "^5.0.1",
