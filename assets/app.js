@@ -16,7 +16,6 @@ window.$ = window.jQuery = require('jquery'); //changed
 import "/public/plugins/datatables/jquery.dataTables.min";
 import "/public/plugins/datatables-bs4/js/dataTables.bootstrap4.min";
 $(document).ready(function() {
-   
  $("table.tb-liste").DataTable({
     "responsive": true,
     "autoWidth": false,
